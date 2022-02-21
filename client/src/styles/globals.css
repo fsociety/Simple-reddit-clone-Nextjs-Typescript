@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply font-medium text-white uppercase transition duration-300 ease-in-out rounded-sm px-3 py-1 lg:py-2 lg:px-14
+    }
+    .button.blue{
+        @apply bg-blue-600 border border-blue-600
+    }
+    .button.blue:hover{
+        @apply bg-blue-700 border-blue-700
+    }
+    .button.hollow{
+        @apply bg-transparent border border-gray-50
+    }
+    .button.hollow:hover{
+        @apply bg-gray-300 text-gray-700
+    }
+    .pcardin a{
+        @apply text-gray-300;
+    }
+    .pcardin a:hover{
+        @apply text-gray-800 transition duration-300 ease-in-out;
+    }
+    .messageBox{
+        @apply flex items-start justify-start w-full px-4 mb-8
+    }
+    .messageBox.other{
+        @apply flex-row
+    }
+    .messageBox.other .mb-txt{
+        @apply w-11/12 px-3 py-3 ml-2 text-sm text-gray-900 bg-blue-200 rounded-lg
+    }
+    .messageBox.me{
+        @apply flex-row-reverse
+    }
+    .messageBox.me .mb-txt{
+        @apply w-11/12 px-3 py-3 mr-2 text-sm text-gray-900 bg-white border-gray-400 rounded-lg border
+    }
+}
+
+.ck-editor{
+    color:#000000;
+}
+
+/* width */
+.quinlan-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.quinlan-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.quinlan-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.quinlan-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
