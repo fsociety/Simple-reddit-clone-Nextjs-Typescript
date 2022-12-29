@@ -3,8 +3,8 @@
    "host": "localhost",
    "port": 5432,
    "username": "postgres",
-   "password": "password",
-   "database": "yourdatabase",
+   "password": "1496",
+   "database": "project_1",
    "synchronize": true,
    "logging": false,
    "entities": [

@@ -146,17 +146,17 @@ const uploadSubImage = async (req: Request, res: Response) => {
         const type = req.body.type
 
         if(type !== 'image' && type !== 'banner'){
-            fs.unlinkSync(req.file.path)
+            fs.unlinkSync(req?.file?.path ?? '')
             return res.status(400).json({ error: 'Invalid type' })
         }
         
         let oldImageUrn: string = ''
         if(type === 'image'){
             oldImageUrn = sub.imageUrn ?? ''
-            sub.imageUrn = req.file.filename
+            sub.imageUrn = req?.file?.filename ?? ''
         }else if (type === 'banner'){
             oldImageUrn = sub.bannerUrn ?? ''
-            sub.bannerUrn = req.file.filename
+            sub.bannerUrn = req?.file?.filename ?? ''
         }
         await sub.save()
 

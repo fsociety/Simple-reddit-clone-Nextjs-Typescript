@@ -41,7 +41,6 @@ export default function PostPage() {
         <>
         <Head>
             <title> { post?.title } </title>
-            <script async src="//cdn.embedly.com/widgets/platform.js"></script>
         </Head>
         <div className="flex items-end w-full h-32 bg-gradient-to-r from-green-400 to-blue-500"
         style={ post && post.sub.bannerUrl ? {
@@ -57,6 +56,7 @@ export default function PostPage() {
                         <Image 
                         src={post.sub.imageUrl}
                         className="rounded-full"
+                        alt=""
                         width={70}
                         height={70}
                         />

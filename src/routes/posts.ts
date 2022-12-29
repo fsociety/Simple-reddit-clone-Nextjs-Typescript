@@ -174,7 +174,7 @@ const upload = multer({
 
 const UploadFiles = async (req: Request, res: Response) =>{    
     try {
-        return res.json({ image: process.env.APP_URL+ '/images/' + req.file.filename })
+        return res.json({ image: process.env.APP_URL+ '/images/' + req?.file?.filename })
     } catch (err) {
         console.log(err)
         return res.status(500).json({ error: 'Something went wrong' })
